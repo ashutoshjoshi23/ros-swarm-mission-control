@@ -1,4 +1,4 @@
-services:
+service1
   - type: web
     name: ros-mission-control-backend
     env: python
@@ -16,3 +16,4 @@ services:
       - type: rewrite
         source: /(.*)
         destination: /index.html
+
