@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ros-mission-control-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+
+  - type: web
+    name: ros-mission-control-frontend
+    env: static
+    publishPath: mission_control_web
+    routes:
+      - type: rewrite
+        source: /(.*)
+        destination: /index.html
