@@ -8,10 +8,11 @@ services:
       - key: PYTHON_VERSION
         value: 3.10
 
-staticSites:
-  - name: ros-mission-control-frontend
-    publishPath: .
-    routes:
-      - type: rewrite
-        source: /(.*)
-        destination: /index.html
+  - type: web
+    name: ros-mission-control-frontend
+    env: python
+    buildCommand: echo "No build needed"
+    startCommand: python serving.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
