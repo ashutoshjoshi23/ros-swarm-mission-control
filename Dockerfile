@@ -13,5 +13,5 @@ COPY . .
 ENV PYTHONPATH=/app
 ENV PORT=8000
 
-# Run the application
-CMD ["sh", "-c", "export PYTHONPATH=/app:$PYTHONPATH && uvicorn backend.main:app --host 0.0.0.0 --port ${PORT}"]
+# Run the application using python -m to ensure the package is recognized
+CMD python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT
