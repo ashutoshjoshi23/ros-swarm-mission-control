@@ -120,6 +120,8 @@ LAUNCH_MISSION
 ```
 http://localhost:5173
 ```
+<img width="1920" height="819" alt="Screenshot (51)" src="https://github.com/user-attachments/assets/c938cd2e-4a6c-4211-ba3d-5e49ea754865" />
+
 
 ### Step 3 — Login Credentials
 
