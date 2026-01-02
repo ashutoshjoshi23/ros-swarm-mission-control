@@ -6,12 +6,12 @@ services:
     startCommand: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: 3.10.0
+        value: 3.10
 
   - type: web
     name: ros-mission-control-frontend
     env: static
-    publishPath: ./
+    publishPath: .
     routes:
       - type: rewrite
         source: /(.*)
