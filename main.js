@@ -1,6 +1,4 @@
-const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8000'
-    : 'https://your-backend-url.onrender.com'; // Replace with your Render URL after deployment
+const API_URL = window.location.origin;
 let state = { robots: [], tasks: [], stats: { avg_energy: 100, completed_count: 0, active_tasks: 0, fleet_size: 0 } };
 let interactionMode = 'TASK';
 let autoTaskEnabled = false;
